@@ -8,8 +8,27 @@
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-  // insert code here...
-  printf("Hello, World!\n");
-    return 0;
+int main() {
+  int fuzz, bizz, nezz;
+  printf("Please input three integers for 'Fuzz', 'Bizz' and 'Nezz': \n");
+  scanf("%d %d %d", &fuzz, &bizz, &nezz);
+  printf("Integer for 'Fuzz' is %d\n", fuzz);
+  printf("Integer for 'Bizz' is %d\n", bizz);
+  printf("Integer for 'Nezz' is %d\n", nezz);
+  
+  
+  
+  for (int i = 1; i <= nezz; i++) {
+    if (i%fuzz==0 && i%bizz==0) {
+      printf("FuzzBizz\n");
+    } else if (i%fuzz==0) {
+      printf("Fuzz\n");
+    } else if (i%bizz==0) {
+      printf("Bizz\n");
+    } else {
+      printf("%d\n", i);
+    }
+  }
+  
+  return 0;
 }
